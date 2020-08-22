@@ -1,0 +1,68 @@
+    <div >
+        <div id="body-content" *ngIf="showForm"> 
+     <form name="MyForm" #ref="ngForm"  (ngSubmit)="Submitform(ref);showForm=false; "   >
+          <h1 class="title">Login Form</h1>
+              <div class="input-field">
+                <label for="name" class="col-form-label">Name</label>
+                <input
+                  type="text"
+                  name="first"
+                  maxlength="100"
+                  id="first"
+                  class="form-control"
+                  placeholder="Name"
+                  ngModel
+                  required
+                />
+              </div>
+              
+              <div class="form-group input-field">
+                <label for="exampleFormControlSelect1">Branch</label>
+                <select class="form-control" ngModel name="exampleFormControlSelect1">
+                  <option selected>NinthSem</option>
+                  <option>Core</option>
+                  <option>Elect Engg</option>
+                  <option>Mech Engg</option>
+                  <option>Design Strategy</option>
+                </select>
+              </div>
+           
+              <div class="input-field">
+                  <label >Are u a Student?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" ngModel name="exampleRadios" id="radio1" value="yes" checked>
+                <label class="form-check-label" for="yes">
+                  YES
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" ngModel name="exampleRadios" id="radio2" value="no">
+                <label class="form-check-label" for="no">
+                  NO
+                </label>
+              </div>
+              </div>
+
+              <div class="form-group input-field">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" ngModel name="exampleInputPassword1" placeholder="Password">
+              </div>
+
+              <button type="submit" class="btn btn-primary "onclick="document.getElementById('div1').style.display = 'block' ;">Submit</button>
+     
+     </form>
+        </div>
+
+     <div id="div1"  style="display: none;">
+         <label>Name: </label>
+         <p id="f1"></p>
+         <br>
+         <label>Interests: </label>
+         <p id="f2"></p>
+         <br>
+         <label>Studying :</label>
+         <p id="f3"></p>
+     </div>
+     </div>
+
+    
